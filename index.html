@@ -15,7 +15,7 @@
 <link href="include/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" type='text/css'>
-
+<link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/tomorrow-night-eighties.min.css">
 <!-- conditional comments -->
 <!--[if IE]>
 <![endif]-->
@@ -36,26 +36,69 @@
 	</div>
 </header>
 
+<section>
+	<div class="center content">
+		<h2>Easy Nav</h2>
+		<p>
+			A stupid simple way of adding responsive navigation to your site.
+		</p>
+		<p>
+			Easy Nav turns your navigation to a drop down navigation for mobile use. It is easy to configure and simple to implement and edit. All the styles for the navigation in screen.scss and the jQuery to make the magic happen are below.
+		</p>
+	<pre>
+	<code>
+	// change nav to drop down
+	$('.mobile').on('click', function() {
+		$(this).next().slideToggle(250);
+		$('.menu li').on('click', function() {
+			$(this).closest('.menu').slideUp(250);
+		});
+		return false;
+	});
+	</code>
+	</pre>
+
+	<pre>
+	<code>
+	// resize listener to show desktop nav
+	$(window).resize(function() {
+		var win = $(window).width();
+		var menu = $('.menu')
+		if (win > 700 && menu.is(':hidden')) {
+			menu.removeAttr('style');
+		} // back to desktop nav at 700px
+	});
+	</code>
+	</pre>
+		<p>
+			Enjoy!
+		</p>
+	</div>
+</section>
+
 <!-- javascript -->
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script>
-		// change nav to mobile drop down function
-		$('.mobile').on('click', function() {
-			$(this).next().slideToggle(250);
-			$('.menu li').on('click', function() {
-				$(this).closest('.menu').slideUp(250);
-			}); // end click event to hide drop down
-			return false;
-		}); // end drop down animation
+<script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 
-		// resize listener to show desktop nav
-		$(window).resize(function() {
-			var win = $(window).width();
-			var menu = $('.menu')
-			if (win > 700 && menu.is(':hidden')) {
-				menu.removeAttr('style');
-			} // switches back to desktop nav at 700px or larger
-		}); // end window listener
+<script>
+	// change nav to mobile drop down function
+	$('.mobile').on('click', function() {
+		$(this).next().slideToggle(250);
+		$('.menu li').on('click', function() {
+			$(this).closest('.menu').slideUp(250);
+		}); // end click event to hide drop down
+		return false;
+	}); // end drop down animation
+
+	// resize listener to show desktop nav
+	$(window).resize(function() {
+		var win = $(window).width();
+		var menu = $('.menu')
+		if (win > 700 && menu.is(':hidden')) {
+			menu.removeAttr('style');
+		} // switches back to desktop nav at 700px or larger
+	}); // end window listener
 </script>
 </body>
 </html>
