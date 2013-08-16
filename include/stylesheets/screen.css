@@ -67,20 +67,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 8, ../sass/screen.scss */
+/* line 9, ../sass/screen.scss */
 body {
   color: #ebebeb;
   font-family: 'PT Sans', sans-serif;
   font-size: 16px;
 }
 
-/* line 14, ../sass/screen.scss */
+/* line 15, ../sass/screen.scss */
 .center {
   padding: 0 3rem;
   margin: 0 auto;
 }
 
-/* line 19, ../sass/screen.scss */
+/* line 20, ../sass/screen.scss */
 header {
   background: #333333;
   height: 6rem;
@@ -89,14 +89,35 @@ header {
   width: 100%;
 }
 
-/* line 27, ../sass/screen.scss */
+/* line 28, ../sass/screen.scss */
+.content {
+  color: #333333;
+  margin-top: 4.5rem;
+}
+
+/* line 33, ../sass/screen.scss */
 h1 {
   float: left;
   font-size: 1.8rem;
   font-weight: 700;
 }
 
-/* line 33, ../sass/screen.scss */
+/* line 39, ../sass/screen.scss */
+h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+/* line 45, ../sass/screen.scss */
+p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+/* line 52, ../sass/screen.scss */
 .icon-reorder {
   color: #ebebeb;
   cursor: pointer;
@@ -106,15 +127,15 @@ h1 {
   top: 2.25rem;
 }
 
-/* line 42, ../sass/screen.scss */
+/* line 63, ../sass/screen.scss */
 nav {
   float: right;
 }
-/* line 45, ../sass/screen.scss */
+/* line 66, ../sass/screen.scss */
 nav li {
   display: inline;
 }
-/* line 48, ../sass/screen.scss */
+/* line 69, ../sass/screen.scss */
 nav li a {
   color: #ebebeb;
   font-size: 1rem;
@@ -125,24 +146,29 @@ nav li a {
   -moz-transition: color 0.3s;
   transition: color 0.3s;
 }
-/* line 59, ../sass/screen.scss */
+/* line 80, ../sass/screen.scss */
 nav li a:hover {
   color: #9FC7E3;
 }
 
 @media screen and (max-width: 43rem) {
-  /* line 67, ../sass/screen.scss */
+  /* line 89, ../sass/screen.scss */
   .center {
     padding: 0 1.5rem;
     margin: 0 auto;
   }
 
-  /* line 71, ../sass/screen.scss */
+  /* line 94, ../sass/screen.scss */
+  .content {
+    margin-top: 4.5rem;
+  }
+
+  /* line 99, ../sass/screen.scss */
   .icon-reorder {
     font-size: 1.5rem;
   }
 
-  /* line 75, ../sass/screen.scss */
+  /* line 103, ../sass/screen.scss */
   nav {
     background: #333333;
     display: none;
@@ -151,13 +177,13 @@ nav li a:hover {
     left: 0rem;
     width: 100%;
   }
-  /* line 83, ../sass/screen.scss */
+  /* line 111, ../sass/screen.scss */
   nav li {
     display: block;
     border-bottom: 1px solid black;
     line-height: 5rem;
   }
-  /* line 88, ../sass/screen.scss */
+  /* line 116, ../sass/screen.scss */
   nav li a {
     color: #ebebeb;
     display: block;

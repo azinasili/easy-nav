@@ -5,6 +5,7 @@
 
 @import "compass/reset";
 
+// Main Styles
 body {
 	color: #ebebeb;
 	font-family: 'PT Sans', sans-serif;
@@ -24,10 +25,28 @@ header {
 	width: 100%;
 }
 
+.content {
+	color: #333333;
+	margin-top: 4.5rem;
+}
+
 h1 {
 	float: left;
 	font-size: 1.8rem;
 	font-weight: 700;
+}
+
+h2 {
+	font-size: 3rem;
+	font-weight: 700;
+	margin-bottom: 2rem;
+}
+
+p {
+	font-size: 1.1rem;
+	line-height: 1.5;
+	margin-bottom: 1.5rem;
+	width: 100%;
 }
 
 .icon-reorder {
@@ -39,6 +58,8 @@ h1 {
 	top: 2.25rem;
 }
 
+
+// Navigation Styles
 nav {
 	float: right;
 
@@ -64,10 +85,17 @@ nav {
 }
 
 @media screen and (max-width: 43rem) {
+	// Main Styles
 	.center {
 		padding: 0 1.5rem;
 		margin: 0 auto;
 	}
+
+	.content {
+		margin-top: 4.5rem;
+	}
+
+	// Navigation Styles
 	.icon-reorder {
 		font-size: 1.5rem
 	}
