@@ -4,3 +4,98 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+
+body {
+	color: #ebebeb;
+	font-family: 'PT Sans', sans-serif;
+	font-size: 16px;
+}
+
+.center {
+	padding: 0 3rem;
+	margin: 0 auto;
+}
+
+header {
+	background: #333333;
+	height: 6rem;
+	line-height: 6rem;
+	position: relative;
+	width: 100%;
+}
+
+h1 {
+	float: left;
+	font-size: 1.8rem;
+	font-weight: 700;
+}
+
+.icon-reorder {
+	color: #ebebeb;
+	cursor: pointer;
+	font-size: 0;
+	float: right;
+	position: relative;
+	top: 2.25rem;
+}
+
+nav {
+	float: right;
+
+	li {
+		display: inline;
+
+		a {
+			color: #ebebeb;
+			font-size: 1rem;
+			font-weight: 400;
+			margin-left: 20px;
+			text-decoration: none;
+
+			-webkit-transition: color 0.3s;
+			   -moz-transition: color 0.3s;
+			        transition: color 0.3s;
+
+			&:hover {
+				color: #9FC7E3;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 43rem) {
+	.center {
+		padding: 0 1.5rem;
+		margin: 0 auto;
+	}
+	.icon-reorder {
+		font-size: 1.5rem
+	}
+
+	nav {
+		background: #333333;
+		display: none;
+		position: absolute;
+		top: 6rem;
+		left: 0rem;
+		width: 100%;
+
+		li {
+			display: block;
+			border-bottom: 1px solid black;
+			line-height: 5rem;
+
+			a {
+				color: #ebebeb;
+				display: block;
+				height: 100%;
+				width: 100%;
+			}
+		}
+	}
+}
+
+
+
+
+
