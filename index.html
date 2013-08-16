@@ -13,6 +13,7 @@
 
 <!-- stylesheets -->
 <link href="include/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" type='text/css'>
 
 <!-- conditional comments -->
@@ -21,10 +22,40 @@
 </head>
 <body>
 
-<!-- HTML goes Here -->
+<header>
+	<div class="center">
+		<h1>Easy Nav</h1>
+		<div class="mobile"><a href="#" class="icon-reorder"></a></div>
+		<nav class="menu">
+			<li><a href="#">Nav Item 1</a></li>
+			<li><a href="#">Nav Item 2</a></li>
+			<li><a href="#">Nav Item 3</a></li>
+			<li><a href="#">Nav Item 4</a></li>
+			<li><a href="#">Nav Item 5</a></li>
+		</na>
+	</div>
+</header>
 
 <!-- javascript -->
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+		// change nav to mobile drop down function
+		$('.mobile').on('click', function() {
+			$(this).next().slideToggle(250);
+			$('.menu li').on('click', function() {
+				$(this).closest('.menu').slideUp(250);
+			}); // end click event to hide drop down
+			return false;
+		}); // end drop down animation
 
+		// resize listener to show desktop nav
+		$(window).resize(function() {
+			var win = $(window).width();
+			var menu = $('.menu')
+			if (win > 700 && menu.is(':hidden')) {
+				menu.removeAttr('style');
+			} // switches back to desktop nav at 700px or larger
+		}); // end window listener
+</script>
 </body>
 </html>
