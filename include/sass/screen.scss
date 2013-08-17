@@ -21,13 +21,15 @@ header {
 	background: #333333;
 	height: 6rem;
 	line-height: 6rem;
-	position: relative;
+	position: fixed;
+	top: 0;
 	width: 100%;
+	z-index: 999;
 }
 
 .content {
 	color: #333333;
-	margin-top: 4.5rem;
+	margin-top: 10rem;
 }
 
 h1 {
@@ -42,13 +44,29 @@ h2 {
 	margin-bottom: 2rem;
 }
 
+h3 {
+	font-size: 2rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+}
+
+h4 {
+	font-size: 1.25rem;
+	font-weight: 700;
+}
+
 p {
-	font-size: 1.1rem;
+	font-size: 1rem;
 	line-height: 1.5;
 	margin-bottom: 1.5rem;
 	width: 100%;
 }
 
+pre, code {
+	overflow-x: scroll;
+}
+
+// Navigation Styles
 .icon-reorder {
 	color: #ebebeb;
 	cursor: pointer;
@@ -58,9 +76,7 @@ p {
 	top: 2.25rem;
 }
 
-
-// Navigation Styles
-nav {
+.main-nav {
 	float: right;
 
 	li {
@@ -70,7 +86,7 @@ nav {
 			color: #ebebeb;
 			font-size: 1rem;
 			font-weight: 400;
-			margin-left: 20px;
+			margin-left: 40px;
 			text-decoration: none;
 
 			-webkit-transition: color 0.3s;
@@ -92,7 +108,7 @@ nav {
 	}
 
 	.content {
-		margin-top: 4.5rem;
+		margin-top: 10rem;
 	}
 
 	// Navigation Styles
@@ -100,7 +116,7 @@ nav {
 		font-size: 1.5rem
 	}
 
-	nav {
+	.main-nav {
 		background: #333333;
 		display: none;
 		position: absolute;

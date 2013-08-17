@@ -27,12 +27,12 @@
 		<h1>Easy Nav</h1>
 		<a href="#" class="mobile-icon icon-reorder"></a>
 		<nav class="main-nav">
-			<li><a href="#">Nav Item 1</a></li>
-			<li><a href="#">Nav Item 2</a></li>
-			<li><a href="#">Nav Item 3</a></li>
-			<li><a href="#">Nav Item 4</a></li>
-			<li><a href="#">Nav Item 5</a></li>
-		</na>
+			<li><a href="#step1">Step 1</a></li>
+			<li><a href="#step2">Step 2</a></li>
+			<li><a href="#step3">Step 3</a></li>
+			<li><a href="#step4">Step 4</a></li>
+			<li><a href="#step5">Step 5</a></li>
+		</nav>
 	</div>
 </header>
 
@@ -40,56 +40,102 @@
 	<div class="center content">
 		<h2>Easy Nav</h2>
 		<p>
-			A stupid simple way of adding responsive navigation to your site.
+			A stupid simple way of adding responsive navigation to your web site.
 		</p>
 		<p>
-			Easy Nav turns your navigation to a drop down navigation for mobile use. It is easy to configure and simple to implement and edit. All the styles for the navigation in screen.scss and the jQuery to make the magic happen are below.
+			Easy Nav turns your horizontal navigation to a drop down nav for mobile use. It is easy to configure and simple to implement and edit. All the styles for the navigation are in screen.scss and the jQuery to make the magic happen is below.
 		</p>
+
+		<h3>How to add Easy Nav</h3>
+		<p>
+			Installing Easy Nav is as simple 4 step process. Once you have everything in place, your desktop navigation will become mobile ready!
+		</p>
+
+	<a name="step1"></a>
+	<h4>Add your navigation.</h4>
 	<pre>
 	<code>
-	// variables for navigation
-	var win = $(window).width();
-	var menu = $('.menu');
-	var menuLink = $('.menu a')
+	&lt;a href="#" class="mobile-icon icon-reorder"&gt;&lt;a&gt;
+	&lt;nav class="main-nav">
+		&lt;li&gt;&lt;a href="#"&gt;Nav Item 1&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Nav Item 2&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Nav Item 3&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Nav Item 4&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Nav Item 5&lt;/a&gt;&lt;/li&gt;
+	&lt;/nav&gt;
+	</code>
+	</pre>
 
-	// toggle drop down function
-	function toggleDropDown() {
-		$('nav').slideUp(250);
+	<a name="step2"></a>
+	<h4>Then add jQuery and the plugin before the closing body tag.</h4>
+	<pre>
+	<code>
+	&lt;script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
+	&lt;script type="text/javascript" src="your/path/to/jquery.easy-nav.js"&gt;&lt;/script&gt;
+	</code>
+	</pre>
+
+	<a name="step3"></a>
+	<h4>Call the plugin to your navigation section</h4>
+	<pre>
+	<code>
+	&lt;script&gt;
+		$(document).ready(function() {
+			$('header').easyNav();
+		});
+	&lt;/script&gt;
+	</code>
+	</pre>
+
+	<a name="step4"></a>
+	<h4>Edit the CSS for you navigation!</h4>
+	<pre>
+	<code>
+	.icon-reorder {
+		color: #ebebeb;
+		cursor: pointer;
+		font-size: 0;
+		float: right;
+		position: relative;
+		top: 2.25rem;
+	}
+
+	nav {
+		float: right;
+	}
+
+	nav li {
+		display: inline;
+	}
+
+	nav li a {
+		color: #ebebeb;
+		font-size: 1rem;
+		font-weight: 400;
+		margin-left: 20px;
+		text-decoration: none;
+		-webkit-transition: color 0.3s;
+		-moz-transition: color 0.3s;
+		transition: color 0.3s;
+	}
+
+	nav li a:hover {
+		color: #9FC7E3;
 	}
 	</code>
 	</pre>
-	<pre>
-	<code>
-	// opens and closes mobile drop down
-	$('#mobile-icon').on('click', function() {
-		$(this).next().slideToggle(250);
-		menuLink.on('click', toggleDropDown);
-		return false;
-	});
-	</code>
-	</pre>
 
-	<pre>
-	<code>
-	// resize listener to show desktop nav
-	$(window).resize(function() {
-		if (win > 560 && menu.is(':hidden')) {
-			menu.removeAttr('style');
-			menuLink.off('click', toggleDropDown);
-		}
-	});
-	</code>
-	</pre>
+		<a name="step5"></a>
 		<p>
-			Enjoy!
+			Crack open a beer and relax!
 		</p>
 	</div>
 </section>
 
 <!-- javascript -->
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
-<script src="include/js/jquery.easy-nav.min.js"></script>
+<script type="text/javascript" src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+<script type="text/javascript" src="include/js/jquery.easy-nav.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 <script>
 	$(document).ready(function() {
