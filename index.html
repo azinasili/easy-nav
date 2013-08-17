@@ -25,8 +25,8 @@
 <header>
 	<div class="center">
 		<h1>Easy Nav</h1>
-		<a href="#" id="mobile-icon" class="icon-reorder"></a>
-		<nav class="menu">
+		<a href="#" class="mobile-icon icon-reorder"></a>
+		<nav class="main-nav">
 			<li><a href="#">Nav Item 1</a></li>
 			<li><a href="#">Nav Item 2</a></li>
 			<li><a href="#">Nav Item 3</a></li>
@@ -89,32 +89,11 @@
 <!-- javascript -->
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+<script src="include/js/jquery.easy-nav.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-
 <script>
-	// variables for navigation
-	var win = $(window).width();
-	var menu = $('.menu');
-	var menuLink = $('.menu a')
-
-	// toggle drop down function
-	function toggleDropDown() {
-		$('nav').slideUp(250);
-	}
-
-	// opens and closes mobile drop down
-	$('#mobile-icon').on('click', function() {
-		$(this).next().slideToggle(250);
-		menuLink.on('click', toggleDropDown);
-		return false;
-	});
-
-	// resize listener to show desktop nav
-	$(window).resize(function() {
-		if (win > 560 && menu.is(':hidden')) {
-			menu.removeAttr('style');
-			menuLink.off('click', toggleDropDown);
-		}
+	$(document).ready(function() {
+		$('header').easyNav();
 	});
 </script>
 </body>
