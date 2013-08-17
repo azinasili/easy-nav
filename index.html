@@ -55,14 +55,16 @@
 	<h4>Add your navigation.</h4>
 	<pre>
 	<code>
-	&lt;a href="#" class="mobile-icon icon-reorder"&gt;&lt;a&gt;
-	&lt;nav class="main-nav">
-		&lt;li&gt;&lt;a href="#"&gt;Nav Item 1&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#"&gt;Nav Item 2&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#"&gt;Nav Item 3&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#"&gt;Nav Item 4&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#"&gt;Nav Item 5&lt;/a&gt;&lt;/li&gt;
-	&lt;/nav&gt;
+	&lt;div class="nav"&gt;
+		&lt;a href="#" class="mobile-icon icon-reorder"&gt;&lt;a&gt;
+		&lt;nav class="main-nav">
+			&lt;li&gt;&lt;a href="#"&gt;Nav Item 1&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Nav Item 2&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Nav Item 3&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Nav Item 4&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Nav Item 5&lt;/a&gt;&lt;/li&gt;
+		&lt;/nav&gt;
+	&lt;/div&gt;
 	</code>
 	</pre>
 
@@ -81,7 +83,7 @@
 	<code>
 	&lt;script&gt;
 		$(document).ready(function() {
-			$('header').easyNav();
+			$('.nav').easyNav();
 		});
 	&lt;/script&gt;
 	</code>
