@@ -25,7 +25,7 @@
 <header>
 	<div class="center">
 		<h1>Easy Nav</h1>
-		<div class="mobile"><a href="#" class="icon-reorder"></a></div>
+		<a href="#" id="mobile-icon" class="icon-reorder"></a>
 		<nav class="menu">
 			<li><a href="#">Nav Item 1</a></li>
 			<li><a href="#">Nav Item 2</a></li>
@@ -47,12 +47,23 @@
 		</p>
 	<pre>
 	<code>
-	// change nav to drop down
-	$('.mobile').on('click', function() {
+	// variables for navigation
+	var win = $(window).width();
+	var menu = $('.menu');
+	var menuLink = $('.menu a')
+
+	// toggle drop down function
+	function toggleDropDown() {
+		$('nav').slideUp(250);
+	}
+	</code>
+	</pre>
+	<pre>
+	<code>
+	// opens and closes mobile drop down
+	$('#mobile-icon').on('click', function() {
 		$(this).next().slideToggle(250);
-		$('.menu li').on('click', function() {
-			$(this).closest('.menu').slideUp(250);
-		});
+		menuLink.on('click', toggleDropDown);
 		return false;
 	});
 	</code>
@@ -62,11 +73,10 @@
 	<code>
 	// resize listener to show desktop nav
 	$(window).resize(function() {
-		var win = $(window).width();
-		var menu = $('.menu')
-		if (win > 700 && menu.is(':hidden')) {
+		if (win > 560 && menu.is(':hidden')) {
 			menu.removeAttr('style');
-		} // back to desktop nav at 700px
+			menuLink.off('click', toggleDropDown);
+		}
 	});
 	</code>
 	</pre>
@@ -82,23 +92,30 @@
 <script>hljs.initHighlightingOnLoad();</script>
 
 <script>
-	// change nav to mobile drop down function
-	$('.mobile').on('click', function() {
+	// variables for navigation
+	var win = $(window).width();
+	var menu = $('.menu');
+	var menuLink = $('.menu a')
+
+	// toggle drop down function
+	function toggleDropDown() {
+		$('nav').slideUp(250);
+	}
+
+	// opens and closes mobile drop down
+	$('#mobile-icon').on('click', function() {
 		$(this).next().slideToggle(250);
-		$('.menu li').on('click', function() {
-			$(this).closest('.menu').slideUp(250);
-		}); // end click event to hide drop down
+		menuLink.on('click', toggleDropDown);
 		return false;
-	}); // end drop down animation
+	});
 
 	// resize listener to show desktop nav
 	$(window).resize(function() {
-		var win = $(window).width();
-		var menu = $('.menu')
-		if (win > 700 && menu.is(':hidden')) {
+		if (win > 560 && menu.is(':hidden')) {
 			menu.removeAttr('style');
-		} // switches back to desktop nav at 700px or larger
-	}); // end window listener
+			menuLink.off('click', toggleDropDown);
+		}
+	});
 </script>
 </body>
 </html>

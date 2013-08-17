@@ -13,13 +13,13 @@ I mentioned Easy Nav is dead simple right? Follow the next few steps and you wil
 
 #### Step 1
 
-Link font awesome to your style sheet
+Link font awesome to your style sheet. Font awesome is used to generate the navigation icon on mobile. This step is optional.
 
 `<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" type='text/css'>`
 
 Then insert the following HTML for your navigation. Remember to edit it as you need.
 
-		<div class="mobile"><a href="#" class="icon-reorder"></a></div>
+		<a href="#" id="mobile-icon" class="icon-reorder"></a>
 		<nav class="menu">
 			<li><a href="#">Nav Item 1</a></li>
 			<li><a href="#">Nav Item 2</a></li>
@@ -38,28 +38,37 @@ Add jQuery to your website. I like to use the following CDN
 
 Add the jQuery magic!
 
-The first script adds the drop down navigation.
+The first script adds variables used through the code and creates a drop down toggle function.
 
-	// change nav to drop down
-	$('.mobile').on('click', function() {
+	// variables for navigation
+	var win = $(window).width();
+	var menu = $('.menu');
+	var menuLink = $('.menu a')
+
+	// toggle drop down function
+	function toggleDropDown() {
+		$('nav').slideUp(250);
+	}
+
+The second script creates the open/close drop down effect.
+
+	// opens and closes mobile drop down
+	$('#mobile-icon').on('click', function() {
 		$(this).next().slideToggle(250);
-		$('.menu li').on('click', function() {
-			$(this).closest('.menu').slideUp(250);
-		});
+		menuLink.on('click', toggleDropDown);
 		return false;
 	});
 
 
-This second script removes a bug on desktops when resizing the browser window.
+This third script removes a bug on desktops when resizing the browser window.
 
 	// resize listener to show desktop nav
 	$(window).resize(function() {
-		var win = $(window).width();
-		var menu = $('.menu')
-		if (win > 700 && menu.is(':hidden')) {
+		if (win > 560 && menu.is(':hidden')) {
 			menu.removeAttr('style');
-		} // back to desktop nav at 700px
-	}); 
+			menuLink.off('click', toggleDropDown);
+		}
+	});
 
 #### Step 4
 
@@ -68,7 +77,7 @@ Style the CSS/SCSS as you see fit!
 
 ### Anything Else?
 
-Nope! I message me with any potential bugs.
+Nope! I message me with any potential bugs. In the next update I will convert the jQuery into a plugin so it's even easier to add to your site!
 
 
 
