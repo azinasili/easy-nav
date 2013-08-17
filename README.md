@@ -20,8 +20,8 @@ Link font awesome to your style sheet. Font awesome is used to generate the navi
 `<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" type='text/css'>`
 
 Then insert the following HTML for your navigation. Remember to edit it as you need.
-	
-	<div class="nav"> 
+
+	<div class="nav">
 		<a href="#" class="mobile-icon icon-reorder"></a>
 		<nav class="main-nav">
 			<li><a href="#">Nav Item 1</a></li>
@@ -54,12 +54,12 @@ The first script adds variables used through the code and creates a drop down to
 
 #### Step 4
 
-Style the CSS/SCSS as you see fit! 
+Style the CSS/SCSS as you see fit!
 
 
 ### Anything Else?
 
-Nope! I message me with any potential bugs. In the next update I will convert the jQuery into a plugin so it's even easier to add to your site!
+Nope! Message me with any potential bugs.
 
 
 
