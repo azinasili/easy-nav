@@ -13,7 +13,7 @@
 		}
 
 		function checkWidth() {
-			if (win > 560 || nav.is(':hidden')) {
+			if (win > 580 || nav.is(':hidden')) {
 				nav.removeAttr('style');
 				navLink.off('click', toggleDropDown);
 			}

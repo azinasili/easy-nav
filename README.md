@@ -15,7 +15,7 @@ I mentioned Easy Nav is dead simple right? Follow the next few steps and you wil
 
 #### Step 1
 
-Link font awesome to your style sheet. Font awesome is used to generate the navigation icon on mobile. This step is optional.
+Link font awesome to your HTML, right after your linked CSS should be fine. Font awesome is used to generate the navigation icon on mobile. This step is optional.
 
 `<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" type='text/css'>`
 
@@ -34,7 +34,7 @@ Then insert the following HTML for your navigation. Remember to edit it as you n
 
 #### Step 2
 
-Add jQuery and the Easy Nav plugin to your website. I like to use the following CDN
+Add jQuery and the Easy Nav plugin to your website. Best to place these right before the closing body tag. I like to use the following CDN.
 
 `<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>`
 
@@ -42,9 +42,7 @@ Add jQuery and the Easy Nav plugin to your website. I like to use the following 
 
 #### Step 3
 
-Add the jQuery magic!
-
-The first script adds variables used through the code and creates a drop down toggle function.
+Add the jQuery magic! Place the jQuery call right after the Easy Nav plugin
 
 	<script>
 		$(document).ready(function() {
@@ -54,7 +52,39 @@ The first script adds variables used through the code and creates a drop down to
 
 #### Step 4
 
-Style the CSS/SCSS as you see fit!
+Add the CSS for your navigation! Remember to edit the CSS to fit your needs.
+
+	.icon-reorder {
+		color: #ebebeb;
+		cursor: pointer;
+		font-size: 0;
+		float: right;
+		position: relative;
+		top: 2.25rem;
+	}
+
+	nav {
+		float: right;
+	}
+
+	nav li {
+		display: inline;
+	}
+
+	nav li a {
+		color: #ebebeb;
+		font-size: 1rem;
+		font-weight: 400;
+		margin-left: 20px;
+		text-decoration: none;
+		-webkit-transition: color 0.3s;
+		-moz-transition: color 0.3s;
+		transition: color 0.3s;
+	}
+
+	nav li a:hover {
+		color: #9FC7E3;
+	}
 
 
 ### Anything Else?

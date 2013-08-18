@@ -21,15 +21,12 @@ header {
 	background: #333333;
 	height: 6rem;
 	line-height: 6rem;
-	position: fixed;
-	top: 0;
 	width: 100%;
-	z-index: 999;
 }
 
 .content {
 	color: #333333;
-	margin-top: 10rem;
+	margin-top: 3rem;
 }
 
 h1 {
@@ -53,6 +50,7 @@ h3 {
 h4 {
 	font-size: 1.25rem;
 	font-weight: 700;
+	margin-bottom: 0.5rem;
 }
 
 p {
@@ -63,6 +61,7 @@ p {
 }
 
 pre, code {
+	margin-top: -1rem;
 	overflow-x: scroll;
 }
 
@@ -81,12 +80,16 @@ pre, code {
 
 	li {
 		display: inline;
+		margin-right: 25px;
+
+		&:last-child {
+			margin-right: 0px;
+		}
 
 		a {
 			color: #ebebeb;
 			font-size: 1rem;
 			font-weight: 400;
-			margin-left: 40px;
 			text-decoration: none;
 
 			-webkit-transition: color 0.3s;
@@ -100,7 +103,7 @@ pre, code {
 	}
 }
 
-@media screen and (max-width: 43rem) {
+@media screen and (max-width: 44rem) {
 	// Main Styles
 	.center {
 		padding: 0 1.5rem;
@@ -108,7 +111,7 @@ pre, code {
 	}
 
 	.content {
-		margin-top: 10rem;
+		margin-top: 2rem;
 	}
 
 	// Navigation Styles
@@ -128,6 +131,7 @@ pre, code {
 			display: block;
 			border-bottom: 1px solid black;
 			line-height: 5rem;
+			margin-left: 25px;
 
 			a {
 				color: #ebebeb;

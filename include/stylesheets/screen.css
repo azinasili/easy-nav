@@ -85,46 +85,44 @@ header {
   background: #333333;
   height: 6rem;
   line-height: 6rem;
-  position: fixed;
-  top: 0;
   width: 100%;
-  z-index: 999;
 }
 
-/* line 30, ../sass/screen.scss */
+/* line 27, ../sass/screen.scss */
 .content {
   color: #333333;
-  margin-top: 10rem;
+  margin-top: 3rem;
 }
 
-/* line 35, ../sass/screen.scss */
+/* line 32, ../sass/screen.scss */
 h1 {
   float: left;
   font-size: 1.8rem;
   font-weight: 700;
 }
 
-/* line 41, ../sass/screen.scss */
+/* line 38, ../sass/screen.scss */
 h2 {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 2rem;
 }
 
-/* line 47, ../sass/screen.scss */
+/* line 44, ../sass/screen.scss */
 h3 {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
-/* line 53, ../sass/screen.scss */
+/* line 50, ../sass/screen.scss */
 h4 {
   font-size: 1.25rem;
   font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 
-/* line 58, ../sass/screen.scss */
+/* line 56, ../sass/screen.scss */
 p {
   font-size: 1rem;
   line-height: 1.5;
@@ -132,12 +130,13 @@ p {
   width: 100%;
 }
 
-/* line 65, ../sass/screen.scss */
+/* line 63, ../sass/screen.scss */
 pre, code {
+  margin-top: -1rem;
   overflow-x: scroll;
 }
 
-/* line 70, ../sass/screen.scss */
+/* line 69, ../sass/screen.scss */
 .icon-reorder {
   color: #ebebeb;
   cursor: pointer;
@@ -147,48 +146,52 @@ pre, code {
   top: 2.25rem;
 }
 
-/* line 79, ../sass/screen.scss */
+/* line 78, ../sass/screen.scss */
 .main-nav {
   float: right;
 }
-/* line 82, ../sass/screen.scss */
+/* line 81, ../sass/screen.scss */
 .main-nav li {
   display: inline;
+  margin-right: 25px;
 }
 /* line 85, ../sass/screen.scss */
+.main-nav li:last-child {
+  margin-right: 0px;
+}
+/* line 89, ../sass/screen.scss */
 .main-nav li a {
   color: #ebebeb;
   font-size: 1rem;
   font-weight: 400;
-  margin-left: 40px;
   text-decoration: none;
   -webkit-transition: color 0.3s;
   -moz-transition: color 0.3s;
   transition: color 0.3s;
 }
-/* line 96, ../sass/screen.scss */
+/* line 99, ../sass/screen.scss */
 .main-nav li a:hover {
   color: #9FC7E3;
 }
 
-@media screen and (max-width: 43rem) {
-  /* line 105, ../sass/screen.scss */
+@media screen and (max-width: 44rem) {
+  /* line 108, ../sass/screen.scss */
   .center {
     padding: 0 1.5rem;
     margin: 0 auto;
   }
 
-  /* line 110, ../sass/screen.scss */
+  /* line 113, ../sass/screen.scss */
   .content {
-    margin-top: 10rem;
+    margin-top: 2rem;
   }
 
-  /* line 115, ../sass/screen.scss */
+  /* line 118, ../sass/screen.scss */
   .icon-reorder {
     font-size: 1.5rem;
   }
 
-  /* line 119, ../sass/screen.scss */
+  /* line 122, ../sass/screen.scss */
   .main-nav {
     background: #333333;
     display: none;
@@ -197,13 +200,14 @@ pre, code {
     left: 0rem;
     width: 100%;
   }
-  /* line 127, ../sass/screen.scss */
+  /* line 130, ../sass/screen.scss */
   .main-nav li {
     display: block;
     border-bottom: 1px solid black;
     line-height: 5rem;
+    margin-left: 25px;
   }
-  /* line 132, ../sass/screen.scss */
+  /* line 136, ../sass/screen.scss */
   .main-nav li a {
     color: #ebebeb;
     display: block;
