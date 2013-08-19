@@ -11,7 +11,7 @@ A dead simple plugin to add responsive navigation.
 
 ## How do I use Easy Nav
 
-I mentioned Easy Nav is dead simple right? Follow the next few steps and you will be on your way to stunning responsive website!
+I mentioned Easy Nav is dead simple right? Follow the next few steps and you will be on your way to stunning responsive website! [View Easy Nav in action here](http://azinasili.com/easy-nav/).
 
 #### Step 1
 
