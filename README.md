@@ -90,6 +90,35 @@ Add the CSS for your navigation! Remember to edit the CSS to fit your needs.
 		color: #9FC7E3;
 	}
 
+    @media screen and (max-width: 44rem) {
+        .icon-reorder {
+            font-size: 1.5rem;
+        }
+
+        .main-nav {
+            background: #333333;
+            display: none;
+            position: absolute;
+            top: 6rem;
+            left: 0rem;
+            width: 100%;
+        }
+
+        .main-nav li {
+            display: block;
+            border-bottom: 1px solid black;
+            line-height: 5rem;
+            margin-left: 25px;
+        }
+
+        .main-nav li a {
+            color: #ebebeb;
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
 
 ### Anything Else?
 
